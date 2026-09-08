@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Koshin Pop（光信ポップ）をビルドする。
+"""Koshin Pop（恒紳ポップ）をビルドする。
 
   python3 tools/fetch_sources.py   # ベースフォントの取得（初回のみ）
   python3 tools/build.py           # build/ に TTF と WOFF2 を出力

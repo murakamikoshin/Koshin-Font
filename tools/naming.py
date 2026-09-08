@@ -10,7 +10,7 @@ import math
 from fontTools.ttLib import TTFont
 
 FAMILY = "Koshin Pop"
-FAMILY_JA = "光信ポップ"
+FAMILY_JA = "恒紳ポップ"
 VERSION = "1.000"
 DESIGNER = "Koshin Murakami"
 DESIGNER_URL = "https://github.com/murakamikoshin"
