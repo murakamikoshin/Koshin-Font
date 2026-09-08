@@ -1,0 +1,8 @@
+# ダウンロードしたベースフォント（再取得可能なので追跡しない）
+sources/*.ttf
+sources/*.otf
+
+# ビルド中間物
+__pycache__/
+*.pyc
+.venv/

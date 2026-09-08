@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>光信ポップ Koshin Pop — 見本帳</title>
+<style>
+  @font-face {
+    font-family: "Koshin Pop";
+    src: url("../build/KoshinPop-Regular.woff2") format("woff2");
+    font-weight: 400; font-display: swap;
+  }
+  @font-face {
+    font-family: "Koshin Pop";
+    src: url("../build/KoshinPop-Bold.woff2") format("woff2");
+    font-weight: 700; font-display: swap;
+  }
+  @font-face {
+    font-family: "Koshin Pop";
+    src: url("../build/KoshinPop-Black.woff2") format("woff2");
+    font-weight: 900; font-display: swap;
+  }
+
+  :root {
+    --ink: #221f1d;
+    --paper: #fffcf5;
+    --accent: #e2583e;
+    --rule: #e6ded0;
+    --muted: #7d7469;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #f3ece2; --paper: #191715; --accent: #ff8a6b;
+      --rule: #35302a; --muted: #a09689;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Koshin Pop", system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  main { max-width: 980px; margin: 0 auto; padding: 6vw 5vw 12vw; }
+
+  .label {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 .6em;
+  }
+
+  h1 { font-weight: 900; font-size: clamp(48px, 11vw, 128px); line-height: 1.05;
+       margin: 0 0 .1em; color: var(--accent); }
+  .tagline { font-weight: 400; font-size: clamp(18px, 3.4vw, 28px);
+             margin: 0 0 3em; color: var(--muted); }
+
+  section { border-top: 1px solid var(--rule); padding: 2.6em 0; }
+
+  .weights p { margin: 0 0 .35em; font-size: clamp(26px, 5.5vw, 46px); line-height: 1.35; }
+  .w400 { font-weight: 400; } .w700 { font-weight: 700; } .w900 { font-weight: 900; }
+
+  .chars { font-size: clamp(22px, 4.2vw, 34px); line-height: 1.7; word-break: break-all; }
+
+  .sizes p { margin: 0 0 .5em; }
+  .s48 { font-size: 48px; } .s32 { font-size: 32px; }
+  .s20 { font-size: 20px; } .s14 { font-size: 14px; }
+
+  .compare { display: grid; gap: 1.4em; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .compare div { font-size: 34px; font-weight: 700; }
+  .compare .off { font-feature-settings: "calt" 0; }
+  .compare .label { font-weight: 400; }
+
+  textarea {
+    width: 100%; min-height: 170px; padding: .7em .8em;
+    background: transparent; color: inherit;
+    border: 1px solid var(--rule); border-radius: 12px;
+    font-family: inherit; font-weight: 700; font-size: 34px; line-height: 1.5;
+    resize: vertical;
+  }
+  textarea:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  footer { border-top: 1px solid var(--rule); padding-top: 2em; color: var(--muted);
+           font-size: 15px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>光信ポップ</h1>
+  <p class="tagline">Koshin Pop — 文字ごとに跳ねる、弾ける日本語書体</p>
+
+  <section class="weights">
+    <p class="label">3 ウェイト</p>
+    <p class="w400">Regular　弾ける感じの日本語 ABCabc 0123</p>
+    <p class="w700">Bold　弾ける感じの日本語 ABCabc 0123</p>
+    <p class="w900">Black　弾ける感じの日本語 ABCabc 0123</p>
+  </section>
+
+  <section>
+    <p class="label">同じ字が並んでも形が変わる（calt）</p>
+    <div class="compare">
+      <div>
+        <p class="label">calt あり</p>
+        ああああああ<br>LOOOOK<br>0000
+      </div>
+      <div class="off">
+        <p class="label">calt なし</p>
+        ああああああ<br>LOOOOK<br>0000
+      </div>
+    </div>
+  </section>
+
+  <section class="chars">
+    <p class="label">収録文字</p>
+    <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+    <p>abcdefghijklmnopqrstuvwxyz</p>
+    <p>0123456789 !?&amp;@#%()「」、。…</p>
+    <p>あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん</p>
+    <p>アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンヴ</p>
+    <p>春夏秋冬 月火水木金土日 東京都渋谷区神南 令和 第一水準・第二水準漢字を収録</p>
+  </section>
+
+  <section class="sizes">
+    <p class="label">サイズ別</p>
+    <p class="s48">吾輩は猫である。名前はまだ無い。</p>
+    <p class="s32">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。</p>
+    <p class="s20">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+    <p class="s14">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。</p>
+  </section>
+
+  <section>
+    <p class="label">試し打ち</p>
+    <textarea spellcheck="false">ここに文字を入力して試せます。
+わくわく ドキドキ ぴょんぴょん！</textarea>
+  </section>
+
+  <footer>
+    <p>Koshin Pop / 光信ポップ — SIL Open Font License 1.1<br>
+    仮名・漢字のアウトラインは <a href="https://github.com/googlefonts/zen-marugothic">Zen Maru Gothic</a>（OFL 1.1）に由来します。</p>
+  </footer>
+</main>
+</body>
+</html>
