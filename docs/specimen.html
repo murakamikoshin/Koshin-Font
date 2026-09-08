@@ -59,17 +59,17 @@
 
   section { border-top: 1px solid var(--rule); padding: 2.6em 0; }
 
-  .weights p { margin: 0 0 .35em; font-size: clamp(26px, 5.5vw, 46px); line-height: 1.35; }
+  .weights p:not(.label) { margin: 0 0 .35em; font-size: clamp(26px, 5.5vw, 46px); line-height: 1.35; }
   .w400 { font-weight: 400; } .w700 { font-weight: 700; } .w900 { font-weight: 900; }
 
-  .chars { font-size: clamp(22px, 4.2vw, 34px); line-height: 1.7; word-break: break-all; }
+  .chars p:not(.label) { font-size: clamp(22px, 4.2vw, 34px); line-height: 1.7; word-break: break-all; }
 
-  .sizes p { margin: 0 0 .5em; }
+  .sizes p:not(.label) { margin: 0 0 .5em; }
   .s48 { font-size: 48px; } .s32 { font-size: 32px; }
   .s20 { font-size: 20px; } .s14 { font-size: 14px; }
 
   .compare { display: grid; gap: 1.4em; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-  .compare div { font-size: 34px; font-weight: 700; }
+  .compare div { font-size: clamp(34px, 6vw, 52px); font-weight: 700; line-height: 1.45; }
   .compare .off { font-feature-settings: "calt" 0; }
   .compare .label { font-weight: 400; }
 
